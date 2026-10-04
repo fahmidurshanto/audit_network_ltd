@@ -29,13 +29,17 @@ export const metadata: Metadata = {
   },
 };
 
+import SmoothScrollProvider from "@/components/SmoothScrollProvider";
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
       className={`${inter.variable} ${fraunces.variable} ${bebas.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <SmoothScrollProvider>{children}</SmoothScrollProvider>
+      </body>
     </html>
   );
 }

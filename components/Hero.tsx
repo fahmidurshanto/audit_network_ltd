@@ -156,23 +156,10 @@ export default function Hero() {
             <span className="text-gold-400 font-medium">Confidence</span>.
           </p>
         </div>
-
-        {/* Scroll button styled with logo gold accents */}
-        <button
-          id="hero-scroll-down"
-          type="button"
-          onClick={scrollNext}
-          aria-label="Scroll to next section"
-          className="h-scroll absolute right-[6%] bottom-[22%] z-20 grid h-12 w-12 place-items-center rounded-full border border-gold-400/50 text-gold-400 transition hover:scale-110 hover:border-gold-400 hover:bg-gold-400/10"
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M12 5v14m0 0-6-6m6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </button>
       </div>
 
-      {/* Navy accent reveal area below the curve */}
-      <div className="h-24 sm:h-32 bg-[#142a42]" />
+      {/* Dark navy background underneath hero curve */}
+      <div className="h-24 sm:h-32 bg-[#0b1b2b]" />
     </section>
   );
 }
