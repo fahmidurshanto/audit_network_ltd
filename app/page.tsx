@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import AboutSection from "@/components/AboutSection";
+import HelpBannerSection from "@/components/HelpBannerSection";
 
 export default function HomePage() {
   return (
@@ -9,6 +10,7 @@ export default function HomePage() {
       <main>
         <Hero />
         <AboutSection />
+        <HelpBannerSection />
       </main>
     </>
   );
