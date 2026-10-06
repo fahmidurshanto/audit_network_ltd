@@ -1,0 +1,218 @@
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+
+const serviceLinks = [
+  { name: "Accounts & Bookkeeping", href: "/services/accounts-bookkeeping" },
+  { name: "Audit & Assurance", href: "/services/audit-assurance" },
+  { name: "Financial Planning & Wealth Management", href: "/services/financial-planning" },
+  { name: "Tax Services", href: "/services/tax-services" },
+  { name: "Advisory Services", href: "/services/advisory-services" },
+  { name: "Outsourced Financial Services", href: "/services/outsourced-financial-services" },
+];
+
+export default function Footer() {
+  return (
+    <footer className="relative isolate bg-[#0b1b2b] text-cream overflow-hidden border-t border-gold-400/20">
+      {/* Top Left Geometry Accent */}
+      <div
+        className="pointer-events-none absolute left-0 top-0 h-16 w-32 bg-[#142a42] -z-10"
+        style={{
+          clipPath: "polygon(0 0, 100% 0, 50% 100%)",
+        }}
+      />
+
+      {/* Top Right Geometric Overlay Accent matching reference layout */}
+      <div className="pointer-events-none absolute right-0 top-0 -z-10 h-64 w-64 opacity-40">
+        <div
+          className="absolute right-0 top-0 h-full w-full bg-gradient-to-bl from-gold-400/30 via-navy-800 to-transparent"
+          style={{ clipPath: "polygon(100% 0, 0 0, 100% 100%)" }}
+        />
+        <div
+          className="absolute right-0 top-0 h-48 w-48 bg-gradient-to-bl from-gold-500/40 to-transparent"
+          style={{ clipPath: "polygon(100% 20%, 30% 100%, 100% 100%)" }}
+        />
+      </div>
+
+      <div className="mx-auto max-w-7xl px-6 pt-16 pb-12 sm:pt-20 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-cream/10">
+          {/* Column 1: Company Info & Registration (lg:col-span-4) */}
+          <div className="lg:col-span-4 space-y-6">
+            {/* Logo */}
+            <Link href="/" className="inline-block transition-transform hover:scale-105">
+              <div className="relative h-12 w-52 rounded-xl bg-white px-3 py-1.5 shadow-md border border-gold-400/30">
+                <Image
+                  src="/logo_transparant.png"
+                  alt="Audit Network Limited"
+                  fill
+                  className="object-contain p-0.5"
+                />
+              </div>
+            </Link>
+
+            <div className="space-y-3 text-sm text-cream/80 leading-relaxed max-w-md">
+              <p className="font-semibold text-white">Company Registration</p>
+              {/* <p>
+                Audit Network Ltd is registered in England &amp; Wales. Authorised and regulated chartered accountants and advisers.
+              </p> */}
+              <p className="text-xs font-semibold text-gold-400">
+                Company number: 06858174
+              </p>
+              <p className="text-xs text-cream/70">
+                Registered office address: 23 Mountside, Stanmore, Middlesex, HA7 2DS
+              </p>
+            </div>
+          </div>
+
+          {/* Column 2: Our Services List (lg:col-span-3) */}
+          <div className="lg:col-span-3 space-y-5">
+            <h3 className="font-display text-lg font-semibold text-white">
+              Our Services:
+            </h3>
+
+            <ul className="space-y-2.5 text-sm text-cream/80">
+              {serviceLinks.map((service) => (
+                <li key={service.href}>
+                  <Link
+                    href={service.href}
+                    className="hover:text-gold-400 transition-colors inline-flex items-center gap-1.5 group"
+                  >
+                    <span className="text-gold-400/60 group-hover:text-gold-400 transition-colors">&rsaquo;</span>
+                    <span>{service.name}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3: Contact Information & Social Links (lg:col-span-3) */}
+          <div className="lg:col-span-3 space-y-5">
+            <h3 className="font-display text-lg font-semibold text-white">
+              Contact Us:
+            </h3>
+
+            <div className="space-y-4 text-sm text-cream/90">
+              {/* Phone */}
+              <div className="flex items-start gap-3">
+                <div className="p-2 rounded-lg bg-gold-400/10 text-gold-400 shrink-0 mt-0.5">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs text-cream/60 uppercase tracking-wider font-semibold">Call Us</p>
+                  <a href="tel:+442079460000" className="text-sm font-bold text-white hover:text-gold-400 transition-colors">
+                    +44 (0) 20 7946 0000
+                  </a>
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="flex items-start gap-3">
+                <div className="p-2 rounded-lg bg-gold-400/10 text-gold-400 shrink-0 mt-0.5">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs text-cream/60 uppercase tracking-wider font-semibold">Email Us</p>
+                  <a
+                    href="mailto:hello@auditnetwork.co.uk"
+                    className="text-sm font-semibold text-white underline decoration-gold-400/50 underline-offset-4 hover:text-gold-400 transition-colors"
+                  >
+                    hello@auditnetwork.co.uk
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Media Icons */}
+            <div className="flex items-center gap-2 pt-1">
+              <a
+                href="#"
+                aria-label="Facebook"
+                className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-cream transition-all hover:bg-gold-400 hover:text-navy-950 hover:scale-105"
+              >
+                <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                </svg>
+              </a>
+              <a
+                href="#"
+                aria-label="X (Twitter)"
+                className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-cream transition-all hover:bg-gold-400 hover:text-navy-950 hover:scale-105"
+              >
+                <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
+              <a
+                href="#"
+                aria-label="Instagram"
+                className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-cream transition-all hover:bg-gold-400 hover:text-navy-950 hover:scale-105"
+              >
+                <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
+              </a>
+              <a
+                href="#"
+                aria-label="LinkedIn"
+                className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-cream transition-all hover:bg-gold-400 hover:text-navy-950 hover:scale-105"
+              >
+                <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          {/* Column 4: Important Information (lg:col-span-2) */}
+          <div className="lg:col-span-2 space-y-5">
+            <h3 className="font-display text-lg font-semibold text-white">
+              Important Information:
+            </h3>
+
+            <ul className="space-y-3 text-sm text-cream/80">
+              <li>
+                <Link
+                  href="/legals"
+                  className="hover:text-gold-400 transition-colors underline decoration-cream/20 underline-offset-4"
+                >
+                  Legals &amp; Disclaimer
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/privacy-policy"
+                  className="hover:text-gold-400 transition-colors underline decoration-cream/20 underline-offset-4"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/cookie-policy"
+                  className="hover:text-gold-400 transition-colors underline decoration-cream/20 underline-offset-4"
+                >
+                  Cookie Policy
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Copyright Bar */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream/60">
+          <p>
+            &copy; {new Date().getFullYear()} Audit Network Ltd. All rights reserved.
+          </p>
+          <p>
+            Designed &amp; Developed for Audit Network Ltd.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
