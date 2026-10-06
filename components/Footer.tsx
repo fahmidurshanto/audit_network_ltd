@@ -36,9 +36,9 @@ export default function Footer() {
       </div>
 
       <div className="mx-auto max-w-7xl px-6 pt-16 pb-12 sm:pt-20 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-cream/10">
-          {/* Column 1: Company Info & Registration (lg:col-span-4) */}
-          <div className="lg:col-span-4 space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-cream/10">
+          {/* Column 1: Company Info & Details (lg:col-span-5) */}
+          <div className="lg:col-span-5 space-y-6">
             {/* Logo */}
             <Link href="/" className="inline-block transition-transform hover:scale-105">
               <div className="relative h-12 w-52 rounded-xl bg-white px-3 py-1.5 shadow-md border border-gold-400/30">
@@ -52,21 +52,29 @@ export default function Footer() {
             </Link>
 
             <div className="space-y-3 text-sm text-cream/80 leading-relaxed max-w-md">
-              <p className="font-semibold text-white">Company Registration</p>
-              {/* <p>
-                Audit Network Ltd is registered in England &amp; Wales. Authorised and regulated chartered accountants and advisers.
-              </p> */}
-              <p className="text-xs font-semibold text-gold-400">
-                Company number: 06858174
-              </p>
-              <p className="text-xs text-cream/70">
-                Registered office address: 23 Mountside, Stanmore, Middlesex, HA7 2DS
-              </p>
+              <p className="font-semibold text-white">Company Details</p>
+              <ul className="space-y-1.5 text-xs text-cream/85">
+                <li>
+                  <span className="font-semibold text-gold-400">Company Number:</span> 06858174
+                </li>
+                <li>
+                  <span className="font-semibold text-cream/90">Incorporated:</span> 2009
+                </li>
+                <li>
+                  <span className="font-semibold text-cream/90">Nature of Business:</span> Accounting and auditing activities
+                </li>
+                <li>
+                  <span className="font-semibold text-cream/90">Registered in:</span> United Kingdom
+                </li>
+                <li className="pt-1 text-cream/70">
+                  <span className="font-semibold text-cream/90">Registered office address:</span> 23 Mountside, Stanmore, Middlesex, HA7 2DS
+                </li>
+              </ul>
             </div>
           </div>
 
-          {/* Column 2: Our Services List (lg:col-span-3) */}
-          <div className="lg:col-span-3 space-y-5">
+          {/* Column 2: Our Services List (lg:col-span-4) */}
+          <div className="lg:col-span-4 space-y-5">
             <h3 className="font-display text-lg font-semibold text-white">
               Our Services:
             </h3>
@@ -167,41 +175,8 @@ export default function Footer() {
               </a>
             </div>
           </div>
-
-          {/* Column 4: Important Information (lg:col-span-2) */}
-          <div className="lg:col-span-2 space-y-5">
-            <h3 className="font-display text-lg font-semibold text-white">
-              Important Information:
-            </h3>
-
-            <ul className="space-y-3 text-sm text-cream/80">
-              <li>
-                <Link
-                  href="/legals"
-                  className="hover:text-gold-400 transition-colors underline decoration-cream/20 underline-offset-4"
-                >
-                  Legals &amp; Disclaimer
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/privacy-policy"
-                  className="hover:text-gold-400 transition-colors underline decoration-cream/20 underline-offset-4"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/cookie-policy"
-                  className="hover:text-gold-400 transition-colors underline decoration-cream/20 underline-offset-4"
-                >
-                  Cookie Policy
-                </Link>
-              </li>
-            </ul>
-          </div>
         </div>
+
 
         {/* Bottom Copyright Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream/60">
