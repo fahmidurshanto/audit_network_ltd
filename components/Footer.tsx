@@ -129,20 +129,7 @@ export default function Footer() {
             </h3>
 
             <div className="space-y-4 text-sm text-navy-900">
-              {/* Phone */}
-              <div className="flex items-start gap-3">
-                <div className="p-2 rounded-lg bg-gold-400/15 text-gold-600 shrink-0 mt-0.5">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-xs text-navy-800/60 uppercase tracking-wider font-semibold">Call Us</p>
-                  <a href="tel:+442079460000" className="text-sm font-bold text-navy-950 hover:text-gold-600 transition-colors">
-                    +44 (0) 20 7946 0000
-                  </a>
-                </div>
-              </div>
+
 
               {/* Email */}
               <div className="flex items-start gap-3">
