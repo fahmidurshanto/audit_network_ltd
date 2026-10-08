@@ -56,11 +56,25 @@ export default function ContactForm({
     e.preventDefault();
     setLoading(true);
 
-    // Simulate submission delay
+    const subject = encodeURIComponent(`New Enquiry from ${formData.firstName} ${formData.lastName}`);
+    const body = encodeURIComponent(`Name: ${formData.firstName} ${formData.lastName}
+Email: ${formData.email}
+Telephone: ${formData.telephone}
+Organization: ${formData.organization || "N/A"}
+Sector: ${formData.businessSector || "N/A"}
+Location: ${[formData.city, formData.country, formData.postcode].filter(Boolean).join(", ") || "N/A"}
+Preferred Contact: ${formData.preferredContact === "contact" ? "Direct Contact" : "Schedule Appointment"}
+
+Message:
+${formData.message}`);
+
+    const recipientEmail = "behzad.faiz@auditnetwork.co.uk"; // Replace with your actual receiving email
+    window.location.href = `mailto:${recipientEmail}?subject=${subject}&body=${body}`;
+
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
-    }, 1000);
+    }, 500);
   };
 
   return (
