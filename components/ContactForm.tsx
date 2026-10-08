@@ -65,33 +65,33 @@ export default function ContactForm({
 
   return (
     <div
-      className={`rounded-3xl border border-gold-400/20 bg-gradient-to-br from-[#0b1b2b] via-[#091523] to-[#060e18] p-6 sm:p-10 shadow-2xl text-cream ${className}`}
+      className={`rounded-3xl border border-gold-400/30 bg-white p-6 sm:p-10 shadow-2xl shadow-navy-950/5 text-navy-950 ${className}`}
     >
       {/* Form Header */}
       <div className="mb-8 text-center sm:text-left">
         {title && (
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-white mb-3">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-navy-950 mb-3">
             {title}
           </h2>
         )}
         {subtitle && (
-          <p className="text-sm sm:text-base leading-relaxed text-cream/80 max-w-3xl">
+          <p className="text-sm sm:text-base leading-relaxed text-navy-800/80 max-w-3xl">
             {subtitle}
           </p>
         )}
       </div>
 
       {submitted ? (
-        <div className="rounded-2xl border border-gold-400/30 bg-gold-400/10 p-8 text-center space-y-4">
-          <div className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-gold-400 text-navy-950">
+        <div className="rounded-2xl border border-gold-400/40 bg-gold-400/10 p-8 text-center space-y-4">
+          <div className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-gold-400 text-navy-950 shadow-md">
             <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h3 className="font-display text-2xl font-semibold text-white">
+          <h3 className="font-display text-2xl font-semibold text-navy-950">
             Thank You for Your Enquiry
           </h3>
-          <p className="text-sm text-cream/85 max-w-lg mx-auto">
+          <p className="text-sm text-navy-850/85 max-w-lg mx-auto">
             We have received your message. One of our specialist team members will review your details and be in touch shortly.
           </p>
           <button
@@ -112,7 +112,7 @@ export default function ContactForm({
                 preferredContact: "contact",
               });
             }}
-            className="mt-4 inline-flex items-center gap-2 rounded-full border border-gold-400 px-6 py-2.5 text-xs font-semibold text-gold-400 transition hover:bg-gold-400 hover:text-navy-950"
+            className="mt-4 inline-flex items-center gap-2 rounded-full border border-navy-950 bg-navy-950 px-6 py-2.5 text-xs font-semibold text-white transition hover:bg-gold-500 hover:border-gold-500 hover:text-navy-950"
           >
             Send Another Message
           </button>
@@ -120,16 +120,16 @@ export default function ContactForm({
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Preferred Contact Mode Toggle */}
-          <div className="rounded-2xl border border-cream/10 bg-white/5 p-4 sm:p-5 mb-6">
-            <label className="block text-xs font-semibold uppercase tracking-wider text-gold-400 mb-3">
+          <div className="rounded-2xl border border-gray-200 bg-[#fbfaf7] p-4 sm:p-5 mb-6">
+            <label className="block text-xs font-semibold uppercase tracking-wider text-gold-600 mb-3">
               How can we best assist you?
             </label>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <label
                 className={`flex items-center gap-3 rounded-xl border p-3.5 cursor-pointer transition-all ${
                   formData.preferredContact === "contact"
-                    ? "border-gold-400 bg-gold-400/10 text-white"
-                    : "border-cream/10 bg-transparent text-cream/70 hover:border-cream/30"
+                    ? "border-gold-500 bg-white shadow-sm text-navy-950 font-semibold"
+                    : "border-gray-200 bg-transparent text-navy-800/70 hover:border-gold-400/50"
                 }`}
               >
                 <input
@@ -138,16 +138,16 @@ export default function ContactForm({
                   value="contact"
                   checked={formData.preferredContact === "contact"}
                   onChange={handleChange}
-                  className="accent-gold-400"
+                  className="accent-gold-500"
                 />
-                <span className="text-sm font-medium">Contact me directly</span>
+                <span className="text-sm">Contact me directly</span>
               </label>
 
               <label
                 className={`flex items-center gap-3 rounded-xl border p-3.5 cursor-pointer transition-all ${
                   formData.preferredContact === "appointment"
-                    ? "border-gold-400 bg-gold-400/10 text-white"
-                    : "border-cream/10 bg-transparent text-cream/70 hover:border-cream/30"
+                    ? "border-gold-500 bg-white shadow-sm text-navy-950 font-semibold"
+                    : "border-gray-200 bg-transparent text-navy-800/70 hover:border-gold-400/50"
                 }`}
               >
                 <input
@@ -156,9 +156,9 @@ export default function ContactForm({
                   value="appointment"
                   checked={formData.preferredContact === "appointment"}
                   onChange={handleChange}
-                  className="accent-gold-400"
+                  className="accent-gold-500"
                 />
-                <span className="text-sm font-medium">Schedule an appointment</span>
+                <span className="text-sm">Schedule an appointment</span>
               </label>
             </div>
           </div>
@@ -166,8 +166,8 @@ export default function ContactForm({
           {/* First Name & Last Name */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
-              <label htmlFor="firstName" className="block text-xs font-medium text-cream/80 mb-2">
-                First Name <span className="text-gold-400">*</span>
+              <label htmlFor="firstName" className="block text-xs font-medium text-navy-900 mb-2">
+                First Name <span className="text-gold-600">*</span>
               </label>
               <input
                 type="text"
@@ -177,13 +177,13 @@ export default function ContactForm({
                 value={formData.firstName}
                 onChange={handleChange}
                 placeholder="e.g. John"
-                className="w-full rounded-xl border border-cream/15 bg-white/5 px-4 py-3 text-sm text-white placeholder-cream/30 transition focus:border-gold-400 focus:bg-navy-900 focus:outline-none focus:ring-1 focus:ring-gold-400"
+                className="w-full rounded-xl border border-gray-200 bg-[#fbfaf7] px-4 py-3 text-sm text-navy-950 placeholder-gray-400 transition focus:border-gold-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-gold-500"
               />
             </div>
 
             <div>
-              <label htmlFor="lastName" className="block text-xs font-medium text-cream/80 mb-2">
-                Last Name <span className="text-gold-400">*</span>
+              <label htmlFor="lastName" className="block text-xs font-medium text-navy-900 mb-2">
+                Last Name <span className="text-gold-600">*</span>
               </label>
               <input
                 type="text"
@@ -193,7 +193,7 @@ export default function ContactForm({
                 value={formData.lastName}
                 onChange={handleChange}
                 placeholder="e.g. Smith"
-                className="w-full rounded-xl border border-cream/15 bg-white/5 px-4 py-3 text-sm text-white placeholder-cream/30 transition focus:border-gold-400 focus:bg-navy-900 focus:outline-none focus:ring-1 focus:ring-gold-400"
+                className="w-full rounded-xl border border-gray-200 bg-[#fbfaf7] px-4 py-3 text-sm text-navy-950 placeholder-gray-400 transition focus:border-gold-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-gold-500"
               />
             </div>
           </div>
@@ -201,8 +201,8 @@ export default function ContactForm({
           {/* Email & Telephone */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
-              <label htmlFor="email" className="block text-xs font-medium text-cream/80 mb-2">
-                Email Address <span className="text-gold-400">*</span>
+              <label htmlFor="email" className="block text-xs font-medium text-navy-900 mb-2">
+                Email Address <span className="text-gold-600">*</span>
               </label>
               <input
                 type="email"
@@ -212,13 +212,13 @@ export default function ContactForm({
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="john.smith@company.co.uk"
-                className="w-full rounded-xl border border-cream/15 bg-white/5 px-4 py-3 text-sm text-white placeholder-cream/30 transition focus:border-gold-400 focus:bg-navy-900 focus:outline-none focus:ring-1 focus:ring-gold-400"
+                className="w-full rounded-xl border border-gray-200 bg-[#fbfaf7] px-4 py-3 text-sm text-navy-950 placeholder-gray-400 transition focus:border-gold-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-gold-500"
               />
             </div>
 
             <div>
-              <label htmlFor="telephone" className="block text-xs font-medium text-cream/80 mb-2">
-                Telephone <span className="text-gold-400">*</span>
+              <label htmlFor="telephone" className="block text-xs font-medium text-navy-900 mb-2">
+                Telephone <span className="text-gold-600">*</span>
               </label>
               <input
                 type="tel"
@@ -228,7 +228,7 @@ export default function ContactForm({
                 value={formData.telephone}
                 onChange={handleChange}
                 placeholder="+44 20 1234 5678"
-                className="w-full rounded-xl border border-cream/15 bg-white/5 px-4 py-3 text-sm text-white placeholder-cream/30 transition focus:border-gold-400 focus:bg-navy-900 focus:outline-none focus:ring-1 focus:ring-gold-400"
+                className="w-full rounded-xl border border-gray-200 bg-[#fbfaf7] px-4 py-3 text-sm text-navy-950 placeholder-gray-400 transition focus:border-gold-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-gold-500"
               />
             </div>
           </div>
@@ -236,7 +236,7 @@ export default function ContactForm({
           {/* Organization Name & Business Sector */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
-              <label htmlFor="organization" className="block text-xs font-medium text-cream/80 mb-2">
+              <label htmlFor="organization" className="block text-xs font-medium text-navy-900 mb-2">
                 Organization Name
               </label>
               <input
@@ -246,12 +246,12 @@ export default function ContactForm({
                 value={formData.organization}
                 onChange={handleChange}
                 placeholder="e.g. Acme Holdings Ltd"
-                className="w-full rounded-xl border border-cream/15 bg-white/5 px-4 py-3 text-sm text-white placeholder-cream/30 transition focus:border-gold-400 focus:bg-navy-900 focus:outline-none focus:ring-1 focus:ring-gold-400"
+                className="w-full rounded-xl border border-gray-200 bg-[#fbfaf7] px-4 py-3 text-sm text-navy-950 placeholder-gray-400 transition focus:border-gold-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-gold-500"
               />
             </div>
 
             <div>
-              <label htmlFor="businessSector" className="block text-xs font-medium text-cream/80 mb-2">
+              <label htmlFor="businessSector" className="block text-xs font-medium text-navy-900 mb-2">
                 Your Business Sector
               </label>
               <select
@@ -259,7 +259,7 @@ export default function ContactForm({
                 name="businessSector"
                 value={formData.businessSector}
                 onChange={handleChange}
-                className="w-full rounded-xl border border-cream/15 bg-[#0b1b2b] px-4 py-3 text-sm text-white transition focus:border-gold-400 focus:outline-none focus:ring-1 focus:ring-gold-400"
+                className="w-full rounded-xl border border-gray-200 bg-[#fbfaf7] px-4 py-3 text-sm text-navy-950 transition focus:border-gold-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-gold-500"
               >
                 <option value="">Select a sector...</option>
                 {businessSectors.map((sector) => (
@@ -273,7 +273,7 @@ export default function ContactForm({
 
           {/* Location Fields (Country, City, Postcode) */}
           <div>
-            <label className="block text-xs font-medium text-cream/80 mb-2">
+            <label className="block text-xs font-medium text-navy-900 mb-2">
               Location Details
             </label>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -283,7 +283,7 @@ export default function ContactForm({
                 value={formData.country}
                 onChange={handleChange}
                 placeholder="Country (e.g. UK)"
-                className="w-full rounded-xl border border-cream/15 bg-white/5 px-4 py-3 text-sm text-white placeholder-cream/30 transition focus:border-gold-400 focus:bg-navy-900 focus:outline-none focus:ring-1 focus:ring-gold-400"
+                className="w-full rounded-xl border border-gray-200 bg-[#fbfaf7] px-4 py-3 text-sm text-navy-950 placeholder-gray-400 transition focus:border-gold-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-gold-500"
               />
               <input
                 type="text"
@@ -291,7 +291,7 @@ export default function ContactForm({
                 value={formData.city}
                 onChange={handleChange}
                 placeholder="City (e.g. London)"
-                className="w-full rounded-xl border border-cream/15 bg-white/5 px-4 py-3 text-sm text-white placeholder-cream/30 transition focus:border-gold-400 focus:bg-navy-900 focus:outline-none focus:ring-1 focus:ring-gold-400"
+                className="w-full rounded-xl border border-gray-200 bg-[#fbfaf7] px-4 py-3 text-sm text-navy-950 placeholder-gray-400 transition focus:border-gold-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-gold-500"
               />
               <input
                 type="text"
@@ -299,15 +299,15 @@ export default function ContactForm({
                 value={formData.postcode}
                 onChange={handleChange}
                 placeholder="Postcode (e.g. EC1V 2NX)"
-                className="w-full rounded-xl border border-cream/15 bg-white/5 px-4 py-3 text-sm text-white placeholder-cream/30 transition focus:border-gold-400 focus:bg-navy-900 focus:outline-none focus:ring-1 focus:ring-gold-400"
+                className="w-full rounded-xl border border-gray-200 bg-[#fbfaf7] px-4 py-3 text-sm text-navy-950 placeholder-gray-400 transition focus:border-gold-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-gold-500"
               />
             </div>
           </div>
 
           {/* Message Area */}
           <div>
-            <label htmlFor="message" className="block text-xs font-medium text-cream/80 mb-2">
-              Tell us more about how we can help you... <span className="text-gold-400">*</span>
+            <label htmlFor="message" className="block text-xs font-medium text-navy-900 mb-2">
+              Tell us more about how we can help you... <span className="text-gold-600">*</span>
             </label>
             <textarea
               id="message"
@@ -317,7 +317,7 @@ export default function ContactForm({
               value={formData.message}
               onChange={handleChange}
               placeholder="Please provide details about your accounting, audit, tax, or advisory requirements..."
-              className="w-full rounded-xl border border-cream/15 bg-white/5 px-4 py-3 text-sm text-white placeholder-cream/30 transition focus:border-gold-400 focus:bg-navy-900 focus:outline-none focus:ring-1 focus:ring-gold-400"
+              className="w-full rounded-xl border border-gray-200 bg-[#fbfaf7] px-4 py-3 text-sm text-navy-950 placeholder-gray-400 transition focus:border-gold-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-gold-500"
             />
           </div>
 
@@ -326,13 +326,13 @@ export default function ContactForm({
             <button
               type="submit"
               disabled={loading}
-              className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-gold-400 to-gold-500 py-4 text-base font-semibold text-navy-950 shadow-[0_4px_25px_rgba(212,175,102,0.35)] transition-all hover:scale-[1.01] hover:shadow-[0_6px_30px_rgba(212,175,102,0.5)] disabled:opacity-60"
+              className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-navy-900 to-navy-950 text-white border border-gold-400/40 py-4 text-base font-semibold shadow-[0_4px_20px_rgba(11,27,43,0.15)] transition-all hover:bg-gold-500 hover:from-gold-400 hover:to-gold-500 hover:text-navy-950 hover:shadow-[0_6px_30px_rgba(212,175,102,0.4)] disabled:opacity-60"
             >
               {loading ? (
                 <span>Submitting enquiry...</span>
               ) : (
                 <>
-                  <span>Submit</span>
+                  <span>Submit Enquiry</span>
                   <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
                 </>
               )}

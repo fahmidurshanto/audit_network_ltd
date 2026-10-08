@@ -1,13 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  /* Updated exact color palette extracted from Audit Network logo */
-  --navy-950: #060e18; /* Darkest background navy */
-  --navy-900: #0b1b2b; /* Primary logo navy */
-  --navy-800: #142a42; /* Medium navy accent */
-  --gold-400: #d4af66; /* Bright logo gold accent */
-  --gold-500: #b89556; /* Logo metallic gold base */
-  --cream: #f8f6f0;    /* Crisp clean off-white text */
+  /* Updated Light Mode Executive Palette */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7f6f2; /* Warm luxury ivory/cream */
+  --bg-card: #ffffff;
+  --navy-950: #060e18; /* Dark navy for bold headings */
+  --navy-900: #0b1b2b; /* Primary dark navy */
+  --navy-800: #1a3350; /* Medium navy */
+  --gold-400: #d4af66; /* Bright gold accent */
+  --gold-500: #b89556; /* Rich metallic gold */
+  --gold-600: #9e7b39; /* Deep gold for light mode text */
+  --text-primary: #0b1b2b;
+  --text-muted: #4b5563;
+  --border-light: #e5e7eb;
 }
 
 @theme inline {
@@ -16,7 +22,8 @@
   --color-navy-800: var(--navy-800);
   --color-gold-400: var(--gold-400);
   --color-gold-500: var(--gold-500);
-  --color-cream: var(--cream);
+  --color-gold-600: var(--gold-600);
+  --color-cream: #f8f6f0;
   --font-sans: var(--font-inter);
   --font-display: var(--font-fraunces);
   --font-hero: var(--font-bebas);
@@ -43,8 +50,8 @@ html.lenis, html.lenis body {
 }
 
 body {
-  background: var(--navy-950);
-  color: var(--cream);
+  background: var(--bg-primary);
+  color: var(--text-primary);
   font-family: var(--font-inter), system-ui, sans-serif;
 }
 

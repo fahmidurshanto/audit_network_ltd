@@ -19,8 +19,8 @@ export default function HomePage() {
         <ReviewsSection />
 
         {/* Contact Form Section */}
-        <section id="contact-section" className="bg-[#0b1b2b] py-20 px-4 sm:px-6 lg:px-8 border-t border-navy-800/40">
-          <div className="mx-auto max-w-4xl">
+        <section id="contact-section" className="bg-[#f7f6f2] py-20 px-4 sm:px-6 lg:px-8 border-t border-gold-400/20">
+          <div className="mx-auto w-full max-w-7xl">
             <ContactForm />
           </div>
         </section>

@@ -168,26 +168,26 @@ export default function ReviewsSection() {
     <section
       ref={sectionRef}
       id="reviews"
-      className="relative isolate bg-[#060e18] py-24 sm:py-32 text-cream overflow-hidden border-t border-navy-800/40"
+      className="relative isolate bg-[#f7f6f2] py-24 sm:py-32 text-navy-950 overflow-hidden border-t border-b border-gold-400/20"
     >
       {/* Huge Background Typography Watermark */}
-      <div className="pointer-events-none absolute left-1/2 top-10 -z-10 -translate-x-1/2 select-none opacity-[0.03] text-[20vw] font-hero font-bold tracking-widest text-white uppercase whitespace-nowrap">
+      <div className="pointer-events-none absolute left-1/2 top-10 -z-10 -translate-x-1/2 select-none opacity-[0.04] text-[20vw] font-hero font-bold tracking-widest text-navy-950 uppercase whitespace-nowrap">
         TESTIMONIALS &amp; REVIEWS
       </div>
 
       {/* Ambient Radial Background Glow */}
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.18)_0%,rgba(11,27,43,0.95)_60%,transparent_100%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(212,175,102,0.14)_0%,rgba(247,246,242,0.9)_60%,transparent_100%)]" />
 
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20 px-6">
-        <div className="inline-flex items-center gap-2 rounded-full border border-gold-400/30 bg-gold-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-gold-400 mb-4">
-          <span className="h-1.5 w-1.5 rounded-full bg-gold-400" />
+        <div className="inline-flex items-center gap-2 rounded-full border border-gold-500/30 bg-gold-400/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-navy-900 mb-4">
+          <span className="h-1.5 w-1.5 rounded-full bg-gold-500" />
           Client Feedback
         </div>
-        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-white leading-tight">
+        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-navy-950 leading-tight">
           What Our Clients Say About Us
         </h2>
-        <p className="mt-4 text-base sm:text-lg leading-relaxed text-cream/75">
+        <p className="mt-4 text-base sm:text-lg leading-relaxed text-navy-800/80">
           Explore trusted feedback from business leaders and individuals across the UK and Ireland.
         </p>
       </div>
@@ -202,27 +202,27 @@ export default function ReviewsSection() {
           {reviewsRow1.map((item, index) => (
             <div key={item.id} className="flex items-center gap-6 sm:gap-8">
               {/* Review Card */}
-              <div className="w-[320px] sm:w-[420px] shrink-0 rounded-3xl bg-gradient-to-br from-navy-900 to-[#0c1f33] border border-gold-400/20 p-7 sm:p-8 shadow-2xl transition-all duration-300 hover:border-gold-400/50 hover:scale-[1.02]">
+              <div className="w-[320px] sm:w-[420px] shrink-0 rounded-3xl bg-white border border-gold-400/30 p-7 sm:p-8 shadow-lg shadow-navy-950/5 transition-all duration-300 hover:border-gold-500 hover:shadow-xl hover:scale-[1.02]">
                 <div className="flex items-center justify-between mb-6">
-                  <span className="rounded-full bg-gold-400/15 border border-gold-400/30 px-3 py-1 text-xs font-semibold text-gold-400">
+                  <span className="rounded-full bg-gold-400/15 border border-gold-400/30 px-3 py-1 text-xs font-semibold text-navy-900">
                     {item.badge}
                   </span>
-                  <div className="flex text-gold-400 text-sm">
+                  <div className="flex text-gold-500 text-sm">
                     {"★".repeat(item.rating)}
                   </div>
                 </div>
-                <p className="text-sm sm:text-base italic leading-relaxed text-cream/90 mb-8 line-clamp-3">
+                <p className="text-sm sm:text-base italic leading-relaxed text-navy-900/90 mb-8 line-clamp-3">
                   &ldquo;{item.text}&rdquo;
                 </p>
-                <div className="flex items-center gap-4 pt-4 border-t border-cream/10">
+                <div className="flex items-center gap-4 pt-4 border-t border-gray-100">
                   <img
                     src={item.avatar}
                     alt={item.name}
                     className="h-11 w-11 rounded-full object-cover border-2 border-gold-400/40"
                   />
                   <div>
-                    <h4 className="text-sm font-bold text-white">{item.name}</h4>
-                    <p className="text-xs text-cream/60">{item.role} &bull; {item.company}</p>
+                    <h4 className="text-sm font-bold text-navy-950">{item.name}</h4>
+                    <p className="text-xs text-navy-800/60">{item.role} &bull; {item.company}</p>
                   </div>
                 </div>
               </div>
@@ -230,7 +230,7 @@ export default function ReviewsSection() {
               {/* Interspaced 3D Sphere after 2nd card (Website Theme: Gold & Navy) */}
               {index === 1 && (
                 <div className="rv-sphere-1 shrink-0 relative flex items-center justify-center px-4">
-                  <div className="h-28 w-28 sm:h-36 sm:w-36 rounded-full bg-[radial-gradient(circle_at_30%_28%,#d4af66_0%,#b89556_30%,#142a42_65%,#060e18_90%)] shadow-[inset_-12px_-12px_28px_rgba(4,9,16,0.9),0_20px_50px_rgba(212,175,102,0.35)] border border-gold-400/40" />
+                  <div className="h-28 w-28 sm:h-36 sm:w-36 rounded-full bg-[radial-gradient(circle_at_30%_28%,#d4af66_0%,#b89556_30%,#142a42_65%,#060e18_90%)] shadow-[inset_-12px_-12px_28px_rgba(4,9,16,0.6),0_20px_50px_rgba(212,175,102,0.3)] border border-gold-400/40" />
                   <div className="absolute inset-0 rounded-full bg-[radial-gradient(ellipse_at_25%_25%,rgba(255,255,255,0.45)_0%,transparent_60%)]" />
                 </div>
               )}
@@ -246,36 +246,36 @@ export default function ReviewsSection() {
           {reviewsRow2.map((item, index) => (
             <div key={item.id} className="flex items-center gap-6 sm:gap-8">
               {/* Review Card */}
-              <div className="w-[320px] sm:w-[420px] shrink-0 rounded-3xl bg-gradient-to-br from-[#0e2136] to-navy-950 border border-gold-500/20 p-7 sm:p-8 shadow-2xl transition-all duration-300 hover:border-gold-400/50 hover:scale-[1.02]">
+              <div className="w-[320px] sm:w-[420px] shrink-0 rounded-3xl bg-white border border-gold-400/30 p-7 sm:p-8 shadow-lg shadow-navy-950/5 transition-all duration-300 hover:border-gold-500 hover:shadow-xl hover:scale-[1.02]">
                 <div className="flex items-center justify-between mb-6">
-                  <span className="rounded-full bg-gold-500/15 border border-gold-400/30 px-3 py-1 text-xs font-semibold text-gold-400">
+                  <span className="rounded-full bg-gold-400/15 border border-gold-400/30 px-3 py-1 text-xs font-semibold text-navy-900">
                     {item.badge}
                   </span>
-                  <div className="flex text-gold-400 text-sm">
+                  <div className="flex text-gold-500 text-sm">
                     {"★".repeat(item.rating)}
                   </div>
                 </div>
-                <p className="text-sm sm:text-base italic leading-relaxed text-cream/90 mb-8 line-clamp-3">
+                <p className="text-sm sm:text-base italic leading-relaxed text-navy-900/90 mb-8 line-clamp-3">
                   &ldquo;{item.text}&rdquo;
                 </p>
-                <div className="flex items-center gap-4 pt-4 border-t border-cream/10">
+                <div className="flex items-center gap-4 pt-4 border-t border-gray-100">
                   <img
                     src={item.avatar}
                     alt={item.name}
                     className="h-11 w-11 rounded-full object-cover border-2 border-gold-400/40"
                   />
                   <div>
-                    <h4 className="text-sm font-bold text-white">{item.name}</h4>
-                    <p className="text-xs text-cream/60">{item.role} &bull; {item.company}</p>
+                    <h4 className="text-sm font-bold text-navy-950">{item.name}</h4>
+                    <p className="text-xs text-navy-800/60">{item.role} &bull; {item.company}</p>
                   </div>
                 </div>
               </div>
 
-              {/* Interspaced 3D Cube after 1st card (Website Theme: Gold & Navy Gradient) */}
+              {/* Interspaced 3D Cube after 1st card */}
               {index === 1 && (
                 <div className="rv-cube-1 shrink-0 relative flex items-center justify-center px-4">
                   <div
-                    className="h-28 w-24 sm:h-32 sm:w-28 rounded-2xl bg-gradient-to-br from-[#e6c885] via-[#d4af66] to-[#0b1b2b] shadow-[0_20px_45px_rgba(212,175,102,0.35)] border border-gold-400/50 -rotate-12"
+                    className="h-28 w-24 sm:h-32 sm:w-28 rounded-2xl bg-gradient-to-br from-[#f0d79e] via-[#d4af66] to-[#142a42] shadow-[0_20px_45px_rgba(212,175,102,0.3)] border border-gold-400/50 -rotate-12"
                     style={{
                       clipPath: "polygon(15% 0%, 100% 20%, 85% 100%, 0% 80%)",
                     }}

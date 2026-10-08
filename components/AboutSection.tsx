@@ -36,10 +36,10 @@ export default function AboutSection() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative isolate bg-[#0b1b2b]"
+      className="relative isolate bg-[#f7f6f2]"
     >
       {/* Curved white content card with top-left rounded arc matching reference */}
-      <div className="relative bg-white py-16 sm:py-24 px-6 lg:px-8 text-navy-950 overflow-hidden rounded-tl-[20vw] sm:rounded-tl-[14vw]">
+      <div className="relative bg-white py-16 sm:py-24 px-6 lg:px-8 text-navy-950 overflow-hidden rounded-tl-[20vw] sm:rounded-tl-[14vw] border-t border-gold-400/20 shadow-sm">
         <div className="mx-auto w-full sm:w-[80%] max-w-6xl text-center">
           {/* Category Pill / Tag */}
           <div className="ab-reveal mb-4 inline-flex items-center gap-2 rounded-full border border-navy-900/20 bg-navy-900/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-navy-900">
@@ -48,7 +48,7 @@ export default function AboutSection() {
           </div>
 
           {/* Main Section Headline */}
-          <h2 className="ab-reveal font-display text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl leading-[1.2] w-full mx-auto text-red-600">
+          <h2 className="ab-reveal font-display text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl leading-[1.2] w-full mx-auto text-navy-950">
             Top UK Chartered Accountants Serving Businesses, Individuals, Families &amp; Trustees
           </h2>
 

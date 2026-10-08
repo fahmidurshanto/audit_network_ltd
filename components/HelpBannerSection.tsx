@@ -36,18 +36,18 @@ export default function HelpBannerSection() {
     <section
       ref={bannerRef}
       id="help-banner"
-      className="relative isolate bg-[#060e18] py-16 sm:py-20 px-6 lg:px-8 text-cream overflow-hidden border-t border-b border-gold-400/20"
+      className="relative isolate bg-[#fbfaf7] py-16 sm:py-20 px-6 lg:px-8 text-navy-950 overflow-hidden border-t border-b border-gold-400/30"
     >
       {/* Ambient background glow */}
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(212,175,102,0.12)_0%,transparent_70%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(212,175,102,0.18)_0%,transparent_70%)]" />
 
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 sm:flex-row sm:items-center">
         {/* Left Side: Title & Description */}
         <div className="help-reveal max-w-xl text-center sm:text-left">
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-navy-950 sm:text-4xl">
             We can help
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-cream/80">
+          <p className="mt-3 text-base sm:text-lg text-navy-800/80">
             Contact us today to find out more about how we can help you.
           </p>
         </div>

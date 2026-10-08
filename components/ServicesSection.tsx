@@ -20,7 +20,7 @@ const services: ServiceItem[] = [
     description:
       "Financial reporting support under UK GAAP and IFRS, including statutory accounts preparation, consolidated reporting, management reporting and technical accounting advisory.",
     linkText: "View Accounts & Bookkeeping",
-    href: "/services/accounts-bookkeeping",
+    href: "/services/accounts-and-bookkeeping",
     icon: (
       <svg
         className="w-10 h-10 text-navy-900"
@@ -50,7 +50,7 @@ const services: ServiceItem[] = [
     description:
       "Independent UK and Ireland audit and assurance services for companies and groups, including statutory audit, group audit, component audit, internal controls review and risk assurance.",
     linkText: "View Audit & Assurance",
-    href: "/services/audit-assurance",
+    href: "/services/audit-and-assurance",
     icon: (
       <svg
         className="w-10 h-10 text-navy-900"
@@ -184,19 +184,19 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative isolate bg-[#0b1b2b] py-20 sm:py-28 px-6 lg:px-8 text-navy-950"
+      className="relative isolate bg-[#ffffff] py-20 sm:py-28 px-6 lg:px-8 text-navy-950"
     >
 
       <div className="mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-          <p className="srv-header font-display text-sm font-semibold tracking-widest text-gold-400 uppercase mb-3">
+          <p className="srv-header font-display text-sm font-semibold tracking-widest text-gold-600 uppercase mb-3">
             Our Services
           </p>
-          <h2 className="srv-header text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-white leading-tight">
+          <h2 className="srv-header text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-navy-950 leading-tight">
             Audit, accounting, tax and compliance services in UK and Ireland
           </h2>
-          <p className="srv-header mt-5 text-base sm:text-lg leading-relaxed text-cream/80">
+          <p className="srv-header mt-5 text-base sm:text-lg leading-relaxed text-navy-800/80">
             A.C.T. Audit is structured around six core service areas, giving clients
             access to specialist support across recurring compliance, technical reporting
             and transaction-led requirements.
@@ -208,16 +208,16 @@ export default function ServicesSection() {
           {services.map((service) => (
             <div
               key={service.id}
-              className="srv-card group flex flex-col justify-between rounded-xl bg-[#e5e4de] border border-[#d8d6cf] p-8 sm:p-9 transition-all duration-300 hover:bg-[#eae8e2] hover:border-gold-500/40 hover:shadow-xl hover:-translate-y-1"
+              className="srv-card group flex flex-col justify-between rounded-2xl bg-[#fbfaf7] border border-gold-400/25 p-8 sm:p-9 shadow-sm transition-all duration-300 hover:bg-white hover:border-gold-500 hover:shadow-xl hover:-translate-y-1"
             >
               <div>
                 {/* Icon */}
-                <div className="mb-6 inline-flex items-center justify-center p-3 rounded-lg bg-navy-900/5 group-hover:bg-gold-400/20 transition-colors duration-300">
+                <div className="mb-6 inline-flex items-center justify-center p-3 rounded-xl bg-gold-400/15 group-hover:bg-gold-400/30 transition-colors duration-300">
                   {service.icon}
                 </div>
 
                 {/* Service Title */}
-                <h3 className="text-xl font-bold tracking-tight text-navy-950 mb-3 group-hover:text-navy-900 transition-colors">
+                <h3 className="text-xl font-bold tracking-tight text-navy-950 mb-3 group-hover:text-gold-600 transition-colors">
                   {service.title}
                 </h3>
 
@@ -231,7 +231,7 @@ export default function ServicesSection() {
               <div>
                 <Link
                   href={service.href}
-                  className="inline-flex items-center gap-2 rounded-full border border-navy-900/15 bg-white/70 px-5 py-2.5 text-xs font-semibold text-navy-900 shadow-sm transition-all duration-200 hover:bg-navy-900 hover:text-white hover:border-navy-900 group/btn"
+                  className="inline-flex items-center gap-2 rounded-full border border-navy-950/20 bg-white px-5 py-2.5 text-xs font-semibold text-navy-950 shadow-sm transition-all duration-200 hover:bg-navy-950 hover:text-white hover:border-navy-950 group/btn"
                 >
                   <span>{service.linkText}</span>
                   <span className="transition-transform duration-200 group-hover/btn:translate-x-1">
