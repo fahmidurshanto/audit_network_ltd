@@ -141,10 +141,10 @@ export default function Footer() {
                 <div>
                   <p className="text-xs text-navy-800/60 uppercase tracking-wider font-semibold">Email Us</p>
                   <a
-                    href="mailto:behzad.faiz@auditnetwork.co.uk"
+                    href="mailto:contact@auditnetwork.co.uk"
                     className="text-sm font-semibold text-navy-950 underline decoration-gold-400 underline-offset-4 hover:text-gold-600 transition-colors"
                   >
-                    behzad.faiz@auditnetwork.co.uk
+                    contact@auditnetwork.co.uk
                   </a>
                 </div>
               </div>

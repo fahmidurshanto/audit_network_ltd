@@ -68,7 +68,7 @@ Preferred Contact: ${formData.preferredContact === "contact" ? "Direct Contact" 
 Message:
 ${formData.message}`);
 
-    const recipientEmail = "behzad.faiz@auditnetwork.co.uk"; // Replace with your actual receiving email
+    const recipientEmail = "contact@auditnetwork.co.uk"; // Replace with your actual receiving email
     window.location.href = `mailto:${recipientEmail}?subject=${subject}&body=${body}`;
 
     setTimeout(() => {
